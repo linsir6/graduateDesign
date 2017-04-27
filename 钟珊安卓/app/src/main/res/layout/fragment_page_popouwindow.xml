@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:paddingBottom="10dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/fr_page_picture"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="23dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img7"/>
+
+
+        <TextView
+            android:id="@+id/fr_page_bag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/fr_page_picture"
+            android:text="连衣裙"
+            android:textColor="@color/bg_font_black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/fr_page_amounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_toRightOf="@id/fr_page_picture"
+            android:text="￥68"
+            android:textColor="@color/bg_clothes_orange"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_toRightOf="@id/fr_page_amounts"
+            android:text="/件"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/duoshao"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="110dp"
+            android:layout_toRightOf="@id/fr_page_picture"
+            android:text="连衣裙"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="120dp"
+            android:layout_toRightOf="@id/fr_page_picture"
+            android:text="精品连衣裙，材料舒适贴身，耐穿"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/fr_page_cuts"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/fragment_page_cuts"
+                />
+
+            <TextView
+                android:id="@+id/fr_page_num"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@mipmap/fragment_page_bg"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="1"
+                android:textColor="@color/bg_clothes_orange"
+                android:textSize="24sp"/>
+
+            <ImageView
+                android:id="@+id/fr_page_plus"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/fragment_page_plus"/>
+【
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/fr_page_sure"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="290dp"
+            android:background="@color/bg_main_blue"
+            android:text="加入购物车"
+            android:textColor="@color/bg_white"/>
+    </RelativeLayout>
+</RelativeLayout>

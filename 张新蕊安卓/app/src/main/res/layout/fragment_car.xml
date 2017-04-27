@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="12dp"
+            android:src="@drawable/location"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/iv_location"
+            android:gravity="center_vertical"
+            android:text="哈尔滨"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="BeautyCar"
+            android:textColor="@color/grey_700"
+            android:textSize="24sp"
+            />
+
+        <!--<ImageView-->
+        <!--android:layout_width="56dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:padding="12dp"-->
+        <!--android:src="@drawable/phone"/>-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/running_views"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="8dp">
+
+        <com.jianyuyouhun.library.AutoBannerView
+            android:id="@+id/autoBannerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:dotGravity="right"
+            app:waitMilliSecond="2000"
+            />
+
+        <TextView
+            android:id="@+id/bannerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#38000000"
+            android:padding="4dp"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/running_views"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+
+            <LinearLayout
+                android:id="@+id/fr_car_beauty"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/wash_car"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="汽车美容"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fr_car_appointment_wash_car"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/appointment_wash_car"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="预约洗车"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fr_car_appointment"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/select_4s"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="预约情况"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+
+            <LinearLayout
+                android:id="@+id/fr_car_introduce"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/introduction"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="服务介绍"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fr_car_phone"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/service"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="联系客服"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fr_car_wait"
+                android:layout_width="1dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/hope"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="敬请期待"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

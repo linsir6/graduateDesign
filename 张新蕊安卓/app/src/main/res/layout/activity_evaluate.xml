@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="订单评价"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"
+        />
+
+    <EditText
+        android:id="@+id/evaluate"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="12dp"
+        android:hint="请输入您对该订单的意见"
+        />
+
+
+    <TextView
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:text="提交"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@color/blue_500"
+        android:textColor="#FFF"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

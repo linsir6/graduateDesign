@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Simple Login Form</title>
+    <meta charset="UTF-8"/>
+    <meta name="Designer" content="PremiumPixels.com">
+    <meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/structure.css">
+</head>
+<body>
+<div class="top">
+    <p>服装销售系统</p>
+</div>
+<form class="box login">
+    <fieldset class="boxBody">
+        <label>Username</label>
+        <input type="text" placeholder="Phone Number" id="username"/>
+        <label>Password</label>
+        <input type="text" placeholder="Password" id="password"/>
+    </fieldset>
+    <footer>
+        <input type="button" onclick="clicke()" class="btnLogin" value="Log in"/>
+    </footer>
+</form>
+<footer id="main">
+    <a href="home_page.html">created by zhongshan</a>
+</footer>
+<script>
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    function clicke() {
+        if (username.value == "admin" && password.value == "admin") {
+            window.location.href='home_page.html';
+        }
+        else{
+            alert("用户名或密码不正确！")
+        }
+    }
+</script>
+</body>
+</html>

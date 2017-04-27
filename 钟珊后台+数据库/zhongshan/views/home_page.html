@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/stylesheets/amazeui.min.css">
+    <link rel="stylesheet" href="/stylesheets/petshow.css">
+    <link rel="stylesheet" href="/stylesheets/animate.min.css">
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/amazeui.min.js"></script>
+    <script src="/javascripts/countUp.min.js"></script>
+    <script src="/javascripts/amazeui.lazyload.min.js"></script>
+    <style>
+        .image {
+            position: absolute;
+            top:350px;
+            left:240px;
+        }
+    </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse">
+    <div class="amz-container">
+        <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-5">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                <li class="am-active">
+                    <a href="#">
+                        首页
+                    </a>
+                </li>
+                <li class="am-dropdown" data-am-dropdown="">
+                    <a class="am-dropdown-toggle" data-am-dropdown-toggle="" href="javascript:;">
+                        商品信息
+                        <span class="am-icon-caret-down">
+                        </span>
+                    </a>
+                    <ul class="am-dropdown-content">
+                        <li>
+                            <a href="add_cloth.html">
+                                添加商品
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cloth_list.html">
+                                商品列表
+                            </a>
+                        </li>
+                        <li>
+                            <a href="update_cloth_list.html">
+                                修改商品信息
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="order_list.html">
+                        订单列表
+                    </a>
+                </li>
+                <li>
+                    <a href="about_our.html">
+                        关于我们
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="get">
+    <div class="am-g">
+        <div class="am-u-lg-12">
+            <div class="get-title">
+                <div class="get_font_left" style="font-size: 40px">已经有</div>
+                <div class="get_font_center" id="banner_num"></div>
+                <div class="get_font_rigth" style="font-size: 40px">名客户</div>
+            </div>
+            <div class="font_line" style="font-size: 45px">加入我们</div>
+        </div>
+    </div>
+</div>
+<div class="image">
+    <img style="width: 800px;height: 300px" id="obj" src="/images/1_1.jpg" border=0/>
+</div>
+
+
+<script src="/javascripts/petshow.js"></script>
+<script type="text/javascript">
+    var curIndex = 0;
+    var timeInterval = 3000;
+    var arr = new Array();
+    arr[0] = "/images/1_1.jpg";
+    arr[1] = "/images/2_2.jpg";
+    setInterval(changeImg, timeInterval);
+    function changeImg() {
+        var obj = document.getElementById("obj");
+        if (curIndex == arr.length - 1) {
+            curIndex = 0;
+        } else {
+            curIndex += 1;
+        }
+        obj.src = arr[curIndex];
+    }
+</script>
+</body>
+</html>

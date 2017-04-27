@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="我的"
+        android:textColor="#1e1e1e"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <com.wenxin.technologyshopping.Activity.customview.CircleImageView
+            android:id="@+id/view"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="18dp"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="#FFF"
+            app:border_width="1dp"/>
+
+        <TextView
+            android:id="@+id/fr_me_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="诺伊 小新"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="16sp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/fr_me_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18304523113"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:id="@+id/fr_me_me_order"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的订单"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:id="@+id/fr_me_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_me_law"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="法律条款"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <RelativeLayout
+        android:id="@+id/fr_me_exit"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出登录"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.wenxin.technologyshopping">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Activity.activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".Activity.activity.HomeActivity">
+
+        </activity>
+        <activity android:name=".Activity.activity.AllShoppingActivity">
+
+        </activity>
+        <activity android:name=".Activity.activity.SearchActivity"/>
+        <activity android:name=".Activity.activity.RegisterActivity"/>
+        <activity android:name=".Activity.activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.activity.MeOrderActivity"/>
+        <activity android:name=".Activity.activity.LawActivity"/>
+        <activity android:name=".Activity.activity.FeedBackActivity"/>
+        <activity android:name=".Activity.activity.TestActivity">
+
+
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="renderer" content="webkit">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="../static/css/pintuer.css">
+    <link rel="stylesheet" href="../static/css/admin.css">
+    <script src="../static/script/jquery.js"></script>
+    <script src="../static/script/pintuer.js"></script>
+    <style>
+        table {
+            position: absolute;
+            left: 80px;
+            top: 140px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th, td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 15px 70px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+        .user{
+            position: absolute;
+            top:70px;
+            right:150px;
+        }
+    </style>
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head">
+        <strong>
+            <span class="icon-pencil-square-o">
+            </span> 显示用户购物情况
+        </strong>
+        <form class="user">
+            <input type="text" id="userId" placeholder="请输入顾客账号" style="height: 35px;width: 300px;padding:0;margin-right: 10px;">
+            <button type="button" onclick="get_data()" style="height:34px ;width: 50px;" >搜索</button>
+        </form>
+    </div>
+    <table id="TbData">
+
+    </table>
+</div>
+<script>
+
+    $.getJSON('/user_list', function (result) {
+        var data = result;
+        $(function () {
+            var html = "";
+            html += "<tr>";
+            html += "<td>" + "订单号" + "</td>"
+            html += "<td>" + "买家账号" + "</td>"
+            html += "<td>" + "购买时间" + "</td>"
+            html += "<td>" + "商品名称" + "</td>"
+            html += "<td>" + "商品价格" + "</td>"
+            html += "<td>" + "商品数量" + "</td>"
+            html += "</tr>";
+            for (var i = 0; i < data.length; i++) {
+                html += "<tr>";
+                html += "<td>" + data[i].id + "</td>"
+                html += "<td>" + data[i].userId + "</td>"
+                html += "<td>" + data[i].order_date + "</td>"
+                html += "<td>" + data[i].name + "</td>"
+                html += "<td>" + data[i].price + "</td>"
+                html += "<td>" + data[i].count + "</td>"
+                html += "</tr>";
+            }
+            $("#TbData").html(html);
+        });
+    })
+    function get_data() {
+        var userId = document.getElementById("userId").value;
+        $.getJSON('/user_list', {
+            userId: userId
+        }, function (result) {
+            var data = result;
+            console.log(userId);
+            $(function () {
+                var html = "";
+                html += "<tr>";
+                html += "<td>" + "订单号" + "</td>"
+                html += "<td>" + "买家账号" + "</td>"
+                html += "<td>" + "购买时间" + "</td>"
+                html += "<td>" + "商品名称" + "</td>"
+                html += "<td>" + "商品价格" + "</td>"
+                html += "<td>" + "商品数量" + "</td>"
+                html += "</tr>";
+                for (var i = 0; i < data.length; i++) {
+                    html += "<tr>";
+                    html += "<td>" + data[i].number+ "</td>"
+                    html += "<td>" + data[i].userId + "</td>"
+                    html += "<td>" + data[i].order_date + "</td>"
+                    html += "<td>" + data[i].name + "</td>"
+                    html += "<td>" + data[i].price + "</td>"
+                    html += "<td>" + data[i].count + "</td>"
+                    html += "</tr>";
+                }
+                $("#TbData").html(html);
+            });
+        })
+    }
+</script>
+</body>
+</html>

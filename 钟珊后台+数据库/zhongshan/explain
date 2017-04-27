@@ -1,0 +1,28 @@
+register
+参数：buyer_name
+     unumber
+     upwd
+若存在 {"code":101}   注册失败
+若不存在  {"code":100}  注册成功
+
+login
+参数：unumber
+     upwd
+若存在 {"code":101}   登录失败
+若不存在  {"code":100}  登录成功
+{"code":100,"username":"lin"}
+
+get_cloth_list
+参数：type(上衣，裤子，鞋)
+
+get_order_list
+我的订单
+参数：unumber
+
+add_order_list
+获取客户购物信息
+参数：unumber,number,items,price,count,buyer,phone,address
+     买家账号,商品编号,商品名称,商品单价,销售数量,买家姓名,预留手机号,买家地址
+
+search
+参数：key

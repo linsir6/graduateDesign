@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="renderer" content="webkit">
+    <title>显示商品信息</title>
+    <link rel="stylesheet" href="../static/css/pintuer.css">
+    <link rel="stylesheet" href="../static/css/admin.css">
+    <script src="../static/script/jquery.js"></script>
+    <script src="../static/script/pintuer.js"></script>
+    <style>
+        table {
+            position: absolute;
+            left: 50px;
+            top: 80px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+        }
+
+        th, td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding:15px 70px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+<div class="panel admin-panel" >
+    <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 显示商品信息</strong></div>
+    <div  style="height: 100%">
+        <table id="TbData">
+
+        </table>
+    </div>
+</div>
+<script>
+    $.getJSON('/get_all_product', function (result) {
+        var data = result;
+        $(function () {
+            var html = "";
+            html += "<tr>";
+            html += "<td>" + "商品ID " + "</td>"
+            html += "<td>" + "商品名称" + "</td>"
+            html += "<td>" + "商品价格" + "</td>"
+            html += "<td>" + "商品类型" + "</td>"
+            html += "<td>" + "商品图片" + "</td>"
+            html += "<td>" + "商品描述" + "</td>"
+            html += "</tr>";
+            for (var i = 0; i < data.length; i++) {
+                html += "<tr>";
+                html += "<td>" + data[i].id + "</td>"
+                html += "<td>" + data[i].name + "</td>"
+                html += "<td>" + data[i].price + "</td>"
+                html += "<td>" + data[i].type + "</td>"
+                html += "<td>" + data[i].img + "</td>"
+                html += "<td>" + data[i].details + "</td>"
+                html += "</tr>";
+            }
+            $("#TbData").html(html);
+        });
+
+    })
+</script>
+</body>
+</html>

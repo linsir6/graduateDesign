@@ -1,0 +1,18 @@
+
+ 端口号：3007
+ 注册接口                       参数                                         处理
+ register                  phone(11) pwd                       检查手机号是否存在，已经存在返回错误代码101,如果不存在，注册成功返回100
+ login                     phone(11） pwd                      检查是否存在这个手机号如果存在返回100登录成功，登录失败返回102
+ washcar                   userName, pwd, contact,             将客户端的 洗车 信息填入数据库
+                           carinfo, date, type
+ car_beauty                userName, pwd, contact,             将客户端的 汽车美容 信息填入数据库
+                           carinfo, date, type，location
+ get_all_info_wash         id                                  查看4s店 洗车 的预约情况(全部订单situation=0&&situation=1）
+ get_all_info_beauty       id                                  查看4s店 汽车美容 的预约情况(全部订单situation=0&&situation=1)
+ get_order_info_wash       无参数                                查看未完成 洗车 订单的情况（situation=0）
+ get_order_info_beauty     无参数                                查看未完成 汽车美容 订单的情况（situation=0）
+ finish_washcar            contact                              修改 洗车 situation 0 为 1
+ finish_beauty             contact                              修改 汽车美容 situation 0 为 1
+ my_order_info_washcar     useName                              我的洗车订单
+ my_order_info_beauty      useName                              我的汽车美容订单
+ check_version             无参数                                查看版本号

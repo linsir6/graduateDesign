@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="renderer" content="webkit">
+    <title>修改商品信息</title>
+    <link rel="stylesheet" href="../static/css/pintuer.css">
+    <link rel="stylesheet" href="../static/css/admin.css">
+    <script src="../static/script/jquery.js"></script>
+    <script src="../static/script/pintuer.js"></script>
+</head>
+<body>
+<div class="panel admin-panel">
+    <div class="panel-head"><strong><span class="icon-pencil-square-o"></span> 修改商品信息</strong></div>
+    <div class="body-content">
+        <form method="post" class="form-x" action="">
+            <div class="form-group">
+                <div class="label">
+                    <label>修改的商品ID：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" value="" id="id1"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>修改的商品名称：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" value="" id="name"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>修改后的商品价格：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" value="" id="price"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>修改后的商品类型：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" value="" id="type"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>修改后的商品图片：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" value="" id="img"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>修改后的商品详情：</label>
+                </div>
+                <div class="field">
+                    <textarea class="input" style="height:80px" id="details"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label>要删除的商品的ID：</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="input" value="" id="id2"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="label">
+                    <label></label>
+                </div>
+                <div class="field">
+                    <button class="button bg-main icon-check-square-o" type="submit" onclick="change_list()"> 提交
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function change_list() {
+        var id = document.getElementById("id1").value;
+        var name = document.getElementById("name").value;
+        var price = document.getElementById("price").value;
+        var type = document.getElementById("type").value;
+        var img = document.getElementById("img").value;
+        var details = document.getElementById("details").value;
+        var id2 = document.getElementById("id2").value;
+        console.log(id2);
+        console.log(name);
+        console.log(price);
+        console.log(id);
+        $.getJSON('/change_shopping_list',
+                {
+                    id: id,
+                    name: name,
+                    price: price,
+                    type: type,
+                    img: img,
+                    details: details,
+                    id2: id2
+                }, function (err, result) {
+                    parent.location.href="index.html";
+                });
+    }
+</script>
+</body>
+</html>

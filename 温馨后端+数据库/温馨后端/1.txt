@@ -1,0 +1,4 @@
+get_all_product   SELECT * FROM shopping
+get_sort_product  SELECT * FROM shopping where type = '" + type + "'
+get_car_product   SELECT * FROM shopping_car where userId = '" + id + "'
+save_in_car       INSERT INTO shopping_car(name,price,type,img,details,count,userId)

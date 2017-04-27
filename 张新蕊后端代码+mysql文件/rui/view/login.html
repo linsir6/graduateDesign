@@ -1,0 +1,40 @@
+<!--登录页面-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Paper Stack</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/set_load.css"/>
+</head>
+<body>
+<div class="container">
+    <section id="content">
+        <form action="">
+            <h1>Admin Load</h1>
+            <div>
+                <input type="text" placeholder="Phone Number" id="username"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Password" id="password"/>
+            </div>
+            <div>
+                <input type="button" onclick="clicke()" value="Log in"/>
+            </div>
+        </form>
+    </section>
+</div>
+<script>
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    function clicke() {
+        if (username.value == "admin" && password.value == "admin") {
+            window.location.href='index.html';
+        }
+        else{
+            alert("用户名或密码不正确！")
+        }
+    }
+</script>
+</body>
+</html>

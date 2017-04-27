@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="BeautyCar"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="软件宗旨："
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本软件旨在帮助大家解决洗车，汽车美容排队的问题，本软件采用公平公开的方式，将当前店铺的预约情况透明的展现在用户的面前。"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="软件功能"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.预约洗车功能\n2.预约汽车美容功能\n3.查询当前4s店情况"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+</LinearLayout>

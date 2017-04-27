@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="意见反馈界面"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#1e1e1e"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dfdfdf"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="24dp"
+        android:hint="请输入您的意见"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="确认提交"
+        android:background="@color/bg_blue"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:layout_margin="20sp"/>
+
+
+
+
+
+
+</LinearLayout>
