@@ -23,7 +23,7 @@
         android:layout_height="100dp"
         android:orientation="horizontal">
 
-        <com.wenxin.technologyshopping.Activity.customview.CircleImageView
+        <com.shan.technologyshopping.Activity.customview.CircleImageView
             android:id="@+id/view"
             android:layout_width="60dp"
             android:layout_height="60dp"

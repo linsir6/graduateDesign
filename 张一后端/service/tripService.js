@@ -201,8 +201,7 @@ exports.search_raiders = function (place) {
 };
 
 
-
-exports.add_travel_notes_list = function (title, date, background,text1,img1,text2) {
+exports.add_travel_notes_list = function (title, date, background, text1, img1, text2) {
     var connection = mysql.createConnection({
         host: '127.0.0.1',
         user: 'root',
@@ -215,7 +214,7 @@ exports.add_travel_notes_list = function (title, date, background,text1,img1,tex
     var promise = new Promise(function (resolve, reject) {
 
         var userAddSql = 'INSERT INTO travel_notes(title, date, background,text1,img1,text2) VALUES(?,?,?,?,?,?)';
-        var userAddSql_Params = [title, date, background,text1,img1,text2];
+        var userAddSql_Params = [title, date, background, text1, img1, text2];
         connection.query(userAddSql, userAddSql_Params, function (err, result) {
             if (err) {
 
@@ -339,9 +338,7 @@ exports.check_version = function () {
 };
 
 
-
 exports.call_back = function (user_phone, user_name, text) {
-
 
 
     var connection = mysql.createConnection({
@@ -359,7 +356,7 @@ exports.call_back = function (user_phone, user_name, text) {
     var promise = new Promise(function (resolve, reject) {
 
         var userAddSql = 'INSERT INTO call_back(user_phone, user_name, text, date) VALUES(?,?,?,?)';
-        var userAddSql_Params = [user_phone, user_name,text,_date];
+        var userAddSql_Params = [user_phone, user_name, text, _date];
         connection.query(userAddSql, userAddSql_Params, function (err, result) {
             if (err) {
 
@@ -377,11 +374,7 @@ exports.call_back = function (user_phone, user_name, text) {
     return promise;
 
 
-
-
 };
-
-
 
 
 

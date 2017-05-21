@@ -24,8 +24,8 @@
       <file leaf-file-name="Shopping.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/Shopping.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5778">
-              <caret line="321" column="64" selection-start-line="321" selection-start-column="58" selection-end-line="321" selection-end-column="64" />
+            <state relative-caret-position="10458">
+              <caret line="581" column="0" selection-start-line="581" selection-start-column="0" selection-end-line="581" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,14 +51,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="459">
+              <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding>
-                <marker date="1492504401000" expanded="true" signature="453:580" ph="{...}" />
-                <marker date="1492504401000" expanded="true" signature="5641:5645" ph="{...}" />
+                <marker date="1494667026000" expanded="true" signature="453:580" ph="{...}" />
+                <marker date="1494667026000" expanded="true" signature="5641:5645" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -98,7 +98,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/user_list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="882">
@@ -170,13 +170,13 @@
         <option value="$PROJECT_DIR$/view/login.html" />
         <option value="$PROJECT_DIR$/1.txt" />
         <option value="$PROJECT_DIR$/view/index.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/view/order_list.html" />
         <option value="$PROJECT_DIR$/view/show_shopping_list.html" />
         <option value="$PROJECT_DIR$/view/user_list.html" />
         <option value="$PROJECT_DIR$/view/add_shopping_list.html" />
         <option value="$PROJECT_DIR$/view/change_shopping_list.html" />
         <option value="$PROJECT_DIR$/service/Shopping.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -198,10 +198,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="22" />
-    <option name="width" value="1740" />
-    <option name="height" value="1173" />
+    <option name="x" value="67" />
+    <option name="y" value="168" />
+    <option name="width" value="1619" />
+    <option name="height" value="957" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -228,7 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,8 +308,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -867,14 +867,20 @@
       <workItem from="1493016684142" duration="2000" />
       <workItem from="1493016708941" duration="1758000" />
       <workItem from="1493094833931" duration="8000" />
+      <workItem from="1493358792651" duration="2146000" />
+      <workItem from="1493641409278" duration="851000" />
+      <workItem from="1494609188436" duration="1556000" />
+      <workItem from="1494666478104" duration="1123000" />
+      <workItem from="1494724363330" duration="1359000" />
+      <workItem from="1494748085642" duration="784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173059000" />
+    <option name="totallyTimeSpent" value="180878000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="22" width="1740" height="1173" extended-state="0" />
+    <frame x="67" y="168" width="1619" height="957" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -883,12 +889,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3200371" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49535963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20057471" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2378011" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1110,25 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <marker date="1492504401000" expanded="true" signature="453:580" ph="{...}" />
-            <marker date="1492504401000" expanded="true" signature="5641:5645" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/Shopping.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5778">
-          <caret line="321" column="64" selection-start-line="321" selection-start-column="58" selection-end-line="321" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/add_shopping_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
@@ -1178,6 +1165,25 @@
         <state relative-caret-position="882">
           <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/Shopping.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10458">
+          <caret line="581" column="0" selection-start-line="581" selection-start-column="0" selection-end-line="581" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding>
+            <marker date="1494667026000" expanded="true" signature="453:580" ph="{...}" />
+            <marker date="1494667026000" expanded="true" signature="5641:5645" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

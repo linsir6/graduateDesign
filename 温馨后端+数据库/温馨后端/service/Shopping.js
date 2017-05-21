@@ -507,6 +507,75 @@ exports.user_list = function (userId) {
 };
 
 
+exports.search_product = function (text) {
+    var promise = new Promise(function (resolve, reject) {
+        var mysql = require('mysql');
+        var connection = mysql.createConnection({
+            host: '127.0.0.1',
+            user: 'root',
+            password: 'root',
+            port: '3306',
+            database: 'WenXin'
+        });
+        connection.connect();
+        connection.query(
+            "SELECT * FROM shopping WHERE name like '%" + text + "%'",
+            function selectCb(err, results) {
+                if (results) {
+                    console.log(results);
+                    resolve(results);
+                }
+                if (err) {
+                    console.log(err);
+                }
+                connection.end();
+            }
+        );
+
+    });
+    promise.then(function (value) {
+        console.log(value);
+        return value;
+        // success
+    }, function (value) {
+        // failure
+    });
+    return promise;
+};
 
 
+exports.count = function (id, count) {
+    console.log(id);
+    var promise = new Promise(function (resolve, reject) {
+        var mysql = require('mysql');
+        var connection = mysql.createConnection({
+            host: '127.0.0.1',
+            user: 'root',
+            password: 'root',
+            port: '3306',
+            database: 'WenXin'
+        });
+        connection.connect();
+
+        var sql = 'UPDATE shopping_car SET count = ? WHERE id = ?';
+        var data = [count, id]
+        connection.query(sql, data, function (err, result) {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            resolve("100");
+            console.log("100");
+        });
+
+    });
+    promise.then(function (value) {
+        console.log(value);
+        return value;
+        // success
+    }, function (value) {
+        // failure
+    });
+    return promise;
+};
 

@@ -88,11 +88,10 @@ router.get('/add_cloth_list', function (req, res, next) {
         var type = param.type;
         var items = param.items;
         var price = param.price;
-        var color = param.color;
-        var size = param.size;
+        var describe = param.describe;
         var picture = param.picture;
-        var add = "INSERT INTO cloth_list(number,type,items,price,color,size,picture) VALUES(?,?,?,?,?,?,?)";
-        connection.query(add, [number, type, items, price, color, size, picture], function (err, result) {
+        var add = "INSERT INTO cloth_list(number,type,items,price,picture,cloth_list.describe) VALUES(?,?,?,?,?,?)";
+        connection.query(add, [number, type, items, price, picture,describe], function (err, result) {
             if (err) {
                 console.log(err);
                 console.log("添加失败");
@@ -187,19 +186,16 @@ router.get('/update_cloth_list', function (req, res, next) {
         var type = param.type;
         var items = param.items;
         var price = param.price;
-        var color = param.color;
-        var size = param.size;
+        var describe = param.describe;
         var picture = param.picture;
         var down_number = param.down_number;
         if (number) {
-
-            var update_cloth_list = "UPDATE cloth_list SET type = '" + type + "',items = '" + items + "',price = '" + price + "',color = '" + color + "',size = '" + size + "',picture = '" + picture + "' WHERE number = '" + number + "'";
+            var update_cloth_list = "UPDATE cloth_list SET type = '" + type + "',items = '" + items + "',price = '" + price + "',cloth_list.describe = '" + describe + "',picture = '" + picture + "' WHERE number = '" + number + "'";
             connection.query(update_cloth_list, function (err, result) {
                 if (err) {
                     console.log(err);
                     console.log("更新失败");
                 } else {
-                    responseJSON(res, result);
                     console.log("更新成功");
                 }
             });
@@ -323,6 +319,139 @@ router.get('/get_order_list', function (req, res, next) {
         connection.end();
     });
 })
+
+router.get('/callback', function (req, res, next) {
+    // 从连接池获取连接
+    pool.getConnection(function (err, connection) {
+// 获取前台页面传过来的参数
+        var param = req.query || req.params;
+        var user_phone = param.user_phone;
+        var user_name = param.user_name;
+        var text = param.text;
+
+        var date = new Date();
+        var _date = date.toLocaleString();
+
+        var userAddSql = 'INSERT INTO call_back(user_phone, user_name, text, date) VALUES(?,?,?,?)';
+        var userAddSql_Params = [user_phone, user_name, text, _date];
+        connection.query(userAddSql, userAddSql_Params, function (err, result) {
+            if (err) {
+
+            } else {
+                responseJSON(res, result);
+            }
+        });
+
+
+        connection.end();
+    });
+})
+
+
+router.get('/shoucang', function (req, res, next) {
+    // 从连接池获取连接
+    pool.getConnection(function (err, connection) {
+// 获取前台页面传过来的参数
+        var param = req.query || req.params;
+        var user_phone = param.user_phone;
+        var product_id = param.product_id;
+        var shoucang = param.shoucang;
+
+        console.log(user_phone);
+
+        if (shoucang == "1") {
+
+            var search_cloth_list = "SELECT shoucang FROM cloth_list WHERE id='" + product_id + "'";
+            connection.query(search_cloth_list, function (err, result) {
+                if (err) {
+                    console.log(err);
+                    console.log("查询失败");
+                } else {
+                    var _shoucang = result[0].shoucang;
+
+                    if (_shoucang != null) {
+                        if (_shoucang.indexOf(user_phone) != -1) {
+                            responseJSON(res, "100");
+                        } else {
+                            _shoucang = _shoucang + user_phone + ";";
+                            var sql = 'UPDATE cloth_list SET shoucang = ? WHERE id = ?';
+                            var data = [_shoucang, product_id];
+                            connection.query(sql, data, function (err, result) {
+                                if (err) {
+                                    console.log(err)
+                                    return;
+                                }
+                                console.log("成功");
+                                responseJSON(res, "100");
+
+                            });
+
+                        }
+                    } else {
+                        _shoucang = "";
+                        _shoucang = _shoucang + user_phone + ";";
+                        var sql = 'UPDATE cloth_list SET shoucang = ? WHERE id = ?';
+                        var data = [_shoucang, product_id];
+                        connection.query(sql, data, function (err, result) {
+                            if (err) {
+                                console.log(err)
+                                return;
+                            }
+                            console.log("成功");
+                            responseJSON(res, "100");
+
+                        });
+                    }
+
+
+                }
+            });
+
+
+        } else {
+
+            var search_cloth_list = "SELECT shoucang FROM cloth_list WHERE id='" + product_id + "'";
+            connection.query(search_cloth_list, function (err, result) {
+
+                if (err) {
+                    console.log(err)
+                } else {
+                    var _shoucang = result[0].shoucang;
+
+                    if (_shoucang == null) {
+                        responseJSON(res, "100");
+                        return;
+                    }
+
+                    if (_shoucang.indexOf(user_phone) != -1) {
+                        _shoucang = _shoucang.replace(user_phone + ";", "");
+                        var sql = 'UPDATE cloth_list SET shoucang = ? WHERE id = ?';
+                        var data = [_shoucang, product_id];
+                        connection.query(sql, data, function (err, result) {
+                            if (err) {
+                                console.log(err);
+                                return;
+                            }
+                            console.log("成功");
+                            responseJSON(res, "100");
+
+                        });
+
+                    }
+
+                }
+
+
+            });
+
+
+        }
+
+
+        connection.end();
+    });
+})
+
 
 router.get("/about_our.html", function (req, res, next) {
     res.render("about_our");

@@ -174,6 +174,31 @@ app.use(controller.get('/user_List.html', function*() {
     this.body = yield render('user_List');
 }));
 
+
+app.use(controller.get('/search_product', function*() {
+    var params = querystring.parse(this.req._parsedUrl.query);
+    var text = params.text;
+    this.set('Cache-Control', 'no-cache');
+    this.body = yield service.search_product(text);
+}));
+
+app.use(controller.get('/count', function*() {
+    var params = querystring.parse(this.req._parsedUrl.query);
+    var id = params.id;
+    var count = params.count;
+    this.set('Cache-Control', 'no-cache');
+    this.body = yield service.count(id, count);
+}));
+
+
+app.use(controller.get('/test', function*() {
+    var params = querystring.parse(this.req._parsedUrl.query);
+    console.log("111111");
+    this.set('Cache-Control', 'no-cache');
+    this.body = "100";
+}));
+
+
 app.listen(3000);
 console.log('Koa server is started!');
 

@@ -15,6 +15,32 @@
         android:paddingBottom="10dp"
         >
 
+        <LinearLayout
+            android:id="@+id/shou_cang"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/fr_page_picture"
+            android:layout_toRightOf="@+id/fr_page_picture"
+            android:layout_toEndOf="@+id/fr_page_picture">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="收藏  "
+                />
+
+            <ImageView
+                android:id="@+id/xing"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/rc_ic_star"
+                />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/fr_page_picture"
@@ -85,7 +111,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="200dp"
             android:orientation="horizontal"
-            >
+            android:id="@+id/linearLayout">
 
             <ImageView
                 android:id="@+id/fr_page_cuts"
@@ -114,7 +140,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp"
                 android:src="@drawable/fragment_page_plus"/>
-【
+
         </LinearLayout>
 
 

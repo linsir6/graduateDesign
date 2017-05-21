@@ -22,6 +22,7 @@
 
     <EditText
         android:id="@+id/user_phone"
+        android:inputType="phone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="12dp"

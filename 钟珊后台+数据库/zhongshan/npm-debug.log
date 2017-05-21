@@ -7,7 +7,7 @@
 6 silly lifecycle myapp@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle myapp@0.0.0~start: myapp@0.0.0
 8 verbose lifecycle myapp@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle myapp@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/mac/WorkSpace/毕设/钟珊后台+数据库/zhongshan/node_modules/.bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin::/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mac/apache-tomcat-8.5.6/bin:/Users/mac/apache-maven-3.3.9/bin:.:/usr/local/mysql/bin
+9 verbose lifecycle myapp@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/mac/WorkSpace/毕设/钟珊后台+数据库/zhongshan/node_modules/.bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/mac/depot_tools::/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mac/apache-tomcat-8.5.6/bin:/Users/mac/apache-maven-3.3.9/bin:.:/usr/local/mysql/bin:/Users/mac/WorkSpace/Shell
 10 verbose lifecycle myapp@0.0.0~start: CWD: /Users/mac/WorkSpace/毕设/钟珊后台+数据库/zhongshan
 11 silly lifecycle myapp@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle myapp@0.0.0~start: Returned: code: 1  signal: null
